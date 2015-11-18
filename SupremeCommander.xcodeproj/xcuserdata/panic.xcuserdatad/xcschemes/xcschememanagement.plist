@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Notification - SupremeCommander WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SupremeCommander WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SupremeCommander.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1F9652751BFC898B009AA72D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F9652891BFC898B009AA72D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F9652941BFC898B009AA72D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F96529D1BFC898B009AA72D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
