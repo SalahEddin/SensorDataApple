@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SupremeCommander_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="131.5" alignment="left" text="Message is here" id="TLO-iH-Lze"/>
+                        <button width="1" alignment="left" title="Static" id="X7h-jQ-LvH"/>
+                        <group width="1" alignment="left" id="jRs-by-yjh">
+                            <items>
+                                <label width="0.33000000000000002" alignment="left" text="X" textAlignment="center" id="rkW-er-lLw"/>
+                                <label width="0.33000000000000002" alignment="left" text="Y" textAlignment="center" id="zU7-XO-bvW"/>
+                                <label width="0.33000000000000002" alignment="left" text="Z" textAlignment="center" id="f1Y-aY-jC2"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="mMessageLabel" destination="TLO-iH-Lze" id="Sa6-HS-C4c"/>
+                        <outlet property="xLabel" destination="rkW-er-lLw" id="RfN-d5-r7h"/>
+                        <outlet property="yLabel" destination="zU7-XO-bvW" id="Sy9-KO-9FM"/>
+                        <outlet property="zLabel" destination="f1Y-aY-jC2" id="VZp-2F-XzR"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +49,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="SupremeCommander_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
