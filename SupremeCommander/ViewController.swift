@@ -10,11 +10,20 @@ import UIKit
 import WatchConnectivity
 
 class ViewController: UIViewController, WCSessionDelegate {
+    ///////////////////////////////////////
+    ////////    Attributes and Properties
+    //
     var session: WCSession!
     @IBOutlet weak var mResultLabel: UILabel!
     @IBOutlet weak var zLabel: UILabel!
     @IBOutlet weak var yLabel: UILabel!
     @IBOutlet weak var xLabel: UILabel!
+    //
+    ///////////////////////////////////////
+    
+    //////////////////////////////////////
+    ////////    Methods
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,11 +33,12 @@ class ViewController: UIViewController, WCSessionDelegate {
             self.session.activateSession()
         }
     }
-
+    // mapped to static button
     @IBAction func sendMessageToWatch(sender: AnyObject) {
         //send message to watch
         session.sendMessage(["a":"hello"], replyHandler: nil, errorHandler: nil)
     }
+    // if message from watch is recieved
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         //recieve messages from watch
         self.mResultLabel.text = message["b"]! as? String
@@ -43,7 +53,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    //
+    //////////////////////////////////////
 }
 
