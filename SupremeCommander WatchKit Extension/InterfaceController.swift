@@ -13,20 +13,32 @@ import HealthKit
 import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    // store previos accelerometer data value
-    var accelHistory: Array<Double> = []
-    
-    
+    ///////////////////////////////////////
+    ////////    Attributes and Properties
+    //////////////////////////////////////
+    //
+    // session responsible for communication between phone and watch
     var session: WCSession!
     let motionManager = CMMotionManager()
-    
+    // mapped outlets
     @IBOutlet var mMessageLabel: WKInterfaceLabel!
+    // labels showing accelerometer values
     @IBOutlet var xLabel: WKInterfaceLabel!
     @IBOutlet var yLabel: WKInterfaceLabel!
     @IBOutlet var zLabel: WKInterfaceLabel!
+    // labels displaying the hand movement direction
     @IBOutlet var xAccelChange: WKInterfaceLabel!
     @IBOutlet var yAccelChange: WKInterfaceLabel!
     @IBOutlet var zAccelChange: WKInterfaceLabel!
+    // stores previous accelerometer data value
+    var accelHistory: Array<Double> = []
+    //
+    ///////////////////////////////////////
+    
+    ///////////////////////////////////////
+    ////////    Methods
+    //////////////////////////////////////
+    //
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -36,7 +48,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+        //start a session for communication with iPhone
         if(WCSession.isSupported()){
             self.session = WCSession.defaultSession()
             self.session.delegate = self
@@ -50,14 +62,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         if (motionManager.accelerometerAvailable == true) {
             let handler:CMAccelerometerHandler = {(data: CMAccelerometerData?, error: NSError?) -> Void in
+                // ipdate the label with newest values
                 self.xLabel.setText(String(format: "%.2f", data!.acceleration.x))
                 self.yLabel.setText(String(format: "%.2f", data!.acceleration.y))
                 self.zLabel.setText(String(format: "%.2f", data!.acceleration.z))
+                // infer direction on each axis
                 self.getAccelDirection(data!.acceleration.x,yAccVal: data!.acceleration.y,zAccVal: data!.acceleration.z)
                 // self.session.sendMessage(["x":String(format: "%.2f", data!.acceleration.x)], replyHandler: nil, errorHandler: nil)
                 // self.session.sendMessage(["y":String(format: "%.2f", data!.acceleration.y)], replyHandler: nil, errorHandler: nil)
                 // self.session.sendMessage(["z":String(format: "%.2f", data!.acceleration.z)], replyHandler: nil, errorHandler: nil)
             }
+            //updates accelerometer every half a second
+            motionManager.accelerometerUpdateInterval = 0.5
             motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: handler)
         }
         else {
@@ -85,7 +101,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         //recieving message from iphone
         self.mMessageLabel.setText(message["a"]! as? String)
     }
-    
+    // infers the direction by comparing the difference of accelerometer in half a second
     func getAccelDirection(xAccVal: Double,yAccVal: Double,zAccVal: Double){
         let xChange = xAccVal - accelHistory[0]
         let yChange = yAccVal - accelHistory[1]
@@ -111,4 +127,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         
     }
+    //
+    ///////////////////////////////////////
 }
