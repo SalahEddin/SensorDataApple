@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
@@ -19,11 +19,21 @@
                                 <label width="0.33000000000000002" alignment="left" text="Z" textAlignment="center" id="f1Y-aY-jC2"/>
                             </items>
                         </group>
+                        <group width="1" height="20" alignment="left" id="HAD-SP-FEM">
+                            <items>
+                                <label width="0.33000000000000002" alignment="left" text="left" textAlignment="center" id="MhA-qe-a42"/>
+                                <label width="0.33000000000000002" alignment="left" text="up" textAlignment="center" id="4J2-1t-QIV"/>
+                                <label width="0.33000000000000002" alignment="left" text="forwd" textAlignment="center" id="9Tn-Me-z3b"/>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="mMessageLabel" destination="TLO-iH-Lze" id="Sa6-HS-C4c"/>
+                        <outlet property="xAccelChange" destination="MhA-qe-a42" id="gQN-WU-Xef"/>
                         <outlet property="xLabel" destination="rkW-er-lLw" id="RfN-d5-r7h"/>
+                        <outlet property="yAccelChange" destination="4J2-1t-QIV" id="nDs-o7-hGk"/>
                         <outlet property="yLabel" destination="zU7-XO-bvW" id="Sy9-KO-9FM"/>
+                        <outlet property="zAccelChange" destination="9Tn-Me-z3b" id="JEs-U8-rm3"/>
                         <outlet property="zLabel" destination="f1Y-aY-jC2" id="VZp-2F-XzR"/>
                     </connections>
                 </controller>
