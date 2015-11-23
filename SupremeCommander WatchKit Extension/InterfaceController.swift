@@ -31,7 +31,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var yAccelChange: WKInterfaceLabel!
     @IBOutlet var zAccelChange: WKInterfaceLabel!
     // stores previous accelerometer data value
-    var accelHistory: Array<Double> = []
+    var accelHistory: [Double] = [0.0,0.0,0.0]
     //
     ///////////////////////////////////////
     
