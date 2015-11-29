@@ -99,27 +99,21 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         accelHistory[1] = yAccVal
         accelHistory[2] = zAccVal
         
+        var accelMsg: [String] = ["","",""]
+        var dirMsg: [String] = ["","",""]
+        
         if(xChange > dirThreshold){
-            XDirLabel.setText("left")
-            if(WCSession.isSupported()){
-                session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
-            }
+            accelMsg[0] = "left"
         }
         else if(xChange < -dirThreshold){
-            XDirLabel.setText("right")
-            if(WCSession.isSupported()){
-                session.sendMessage(["accelX":"right"], replyHandler: nil, errorHandler: nil)
-            }
+            accelMsg[0] = "right"
         }
         else{
-            XDirLabel.setText("NaN")
-            if(WCSession.isSupported()){
-                session.sendMessage(["accelX":"NaN"], replyHandler: nil, errorHandler: nil)
-            }
+            accelMsg[0] = "NaN"
         }
         
         if(yChange > dirThreshold){
-            YDirLabel.setText("down")
+            accelMsg[1] = "down"
         }
         else if(yChange < -dirThreshold){
             YDirLabel.setText("up")
@@ -136,6 +130,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         else{
             ZDirLabel.setText("NaN")
+        }
+        
+        XDirLabel.setText(dirMsg[0])
+        YDirLabel.setText(dirMsg[1])
+        ZDirLabel.setText(dirMsg[2])
+        
+        if(WCSession.isSupported()){
+            session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
         }
     }
 }
