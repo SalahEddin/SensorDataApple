@@ -325,11 +325,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Panayiotis Andreou";
+				ORGANIZATIONNAME = "Salah eddin";
 				TargetAttributes = {
 					1F9652751BFC898B009AA72D = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 95RYSHRR2L;
+						DevelopmentTeam = R86STB8XPK;
 					};
 					1F9652891BFC898B009AA72D = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -651,10 +651,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SupremeCommander/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = panictools.SupremeCommander;
+				PRODUCT_BUNDLE_IDENTIFIER = salah.SupremeCommander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -662,10 +665,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SupremeCommander/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = panictools.SupremeCommander;
+				PRODUCT_BUNDLE_IDENTIFIER = salah.SupremeCommander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -736,6 +742,7 @@
 				1F9652C11BFC898C009AA72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9652C31BFC898C009AA72D /* Build configuration list for PBXNativeTarget "SupremeCommander WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -744,6 +751,7 @@
 				1F9652C51BFC898C009AA72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9652C71BFC898C009AA72D /* Build configuration list for PBXNativeTarget "SupremeCommander" */ = {
 			isa = XCConfigurationList;
@@ -752,6 +760,7 @@
 				1F9652C91BFC898C009AA72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9652CA1BFC898C009AA72D /* Build configuration list for PBXNativeTarget "SupremeCommanderTests" */ = {
 			isa = XCConfigurationList;
@@ -760,6 +769,7 @@
 				1F9652CC1BFC898C009AA72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9652CD1BFC898C009AA72D /* Build configuration list for PBXNativeTarget "SupremeCommanderUITests" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +778,7 @@
 				1F9652CF1BFC898C009AA72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

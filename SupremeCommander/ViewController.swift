@@ -41,12 +41,11 @@ class ViewController: UIViewController, WCSessionDelegate {
     // if message from watch is recieved
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         //recieve messages from watch
-        self.mResultLabel.text = message["b"]! as? String
         /*self.xLabel.text = message["x"]! as? String
         self.yLabel.text = message["y"]! as? String
         self.zLabel.text = message["z"]! as? String*/
         dispatch_async(dispatch_get_main_queue(), {
-            self.mResultLabel.text = message["b"]! as? String
+            self.mResultLabel.text = message["static"]! as? String
         })
     }
     override func didReceiveMemoryWarning() {

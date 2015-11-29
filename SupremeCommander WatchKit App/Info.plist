@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>panictools.SupremeCommander</string>
+	<string>salah.SupremeCommander</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

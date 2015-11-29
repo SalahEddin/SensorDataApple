@@ -13,14 +13,16 @@ import HealthKit
 import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    ///////////////////////////////////////
+    //+++++++++++++++++++++++++++++++++++
     ////////    Attributes and Properties
-    //////////////////////////////////////
-    //
+    //+++++++++++++++++++++++++++++++++++
+    
     // session responsible for communication between phone and watch
     var session: WCSession!
     let motionManager = CMMotionManager()
+    /////////////////
     // mapped outlets
+    
     @IBOutlet var mMessageLabel: WKInterfaceLabel!
     // labels showing accelerometer values
     @IBOutlet var xLabel: WKInterfaceLabel!
@@ -32,12 +34,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var zAccelChange: WKInterfaceLabel!
     // stores previous accelerometer data value
     var accelHistory: [Double] = [0.0,0.0,0.0]
-    //
-    ///////////////////////////////////////
     
-    ///////////////////////////////////////
+    //+++++++++++++++++++++++++++++++++++
     ////////    Methods
-    //////////////////////////////////////
+    //+++++++++++++++++++++++++++++++++++
     //
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -53,7 +53,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             self.session = WCSession.defaultSession()
             self.session.delegate = self
             self.session.activateSession()
-            session.sendMessage(["b":"Session started"], replyHandler: nil, errorHandler: nil)
         }
         //initialise accelerometer history values
         accelHistory[0] = 0
@@ -68,9 +67,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.zLabel.setText(String(format: "%.2f", data!.acceleration.z))
                 // infer direction on each axis
                 self.getAccelDirection(data!.acceleration.x,yAccVal: data!.acceleration.y,zAccVal: data!.acceleration.z)
-                // self.session.sendMessage(["x":String(format: "%.2f", data!.acceleration.x)], replyHandler: nil, errorHandler: nil)
-                // self.session.sendMessage(["y":String(format: "%.2f", data!.acceleration.y)], replyHandler: nil, errorHandler: nil)
-                // self.session.sendMessage(["z":String(format: "%.2f", data!.acceleration.z)], replyHandler: nil, errorHandler: nil)
             }
             //updates accelerometer every half a second
             motionManager.accelerometerUpdateInterval = 0.5
@@ -93,7 +89,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func sendStaticToiPhone() {
         if(WCSession.isSupported()){
-            session.sendMessage(["b":"goodBye"], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["static":"static message sent here"], replyHandler: nil, errorHandler: nil)
         }
     }
     
@@ -104,8 +100,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // infers the direction by comparing the difference of accelerometer in half a second
     func getAccelDirection(xAccVal: Double,yAccVal: Double,zAccVal: Double){
         let xChange = xAccVal - accelHistory[0]
-        let yChange = yAccVal - accelHistory[1]
-        let zChange = zAccVal - accelHistory[2]
+//        let yChange = yAccVal - accelHistory[1]
+//        let zChange = zAccVal - accelHistory[2]
         
         if(xChange > 1.2){
             xAccelChange.setText("left")
@@ -113,20 +109,21 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         else if(xChange < -1.2){
             xAccelChange.setText("right")
         }
-        if(yChange > 1.2){
-            yAccelChange.setText("down")
+        else{
+            xAccelChange.setText("NaN")
         }
-        else if(yChange < -1.2){
-            yAccelChange.setText("up")
-        }
-        if(zChange > 1.2){
-            zAccelChange.setText("back")
-        }
-        else if(zChange < -1.2){
-            zAccelChange.setText("forwd")
-        }
+//        if(yChange > 1.2){
+//            yAccelChange.setText("down")
+//        }
+//        else if(yChange < -1.2){
+//            yAccelChange.setText("up")
+//        }
+//        if(zChange > 1.2){
+//            zAccelChange.setText("back")
+//        }
+//        else if(zChange < -1.2){
+//            zAccelChange.setText("forwd")
+//        }
         
     }
-    //
-    ///////////////////////////////////////
 }
