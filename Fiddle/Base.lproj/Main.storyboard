@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI7-L7-hNY">
-                                <rect key="frame" x="21" y="67" width="12" height="21"/>
+                                <rect key="frame" x="21" y="66" width="12" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -78,7 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="ResultLabel" destination="2SE-vb-t8p" id="D1R-0s-Zgh"/>
-                        <outlet property="XAccelLabels" destination="zI7-L7-hNY" id="30O-uc-rRu"/>
+                        <outlet property="XAccelLabel" destination="zI7-L7-hNY" id="R0b-1J-fNv"/>
                         <outlet property="XDirLabel" destination="VE1-Rr-cCz" id="1ql-Xe-cKr"/>
                         <outlet property="YAccelLabel" destination="nAt-O6-RJp" id="KGF-Ce-xVL"/>
                         <outlet property="YDirLabel" destination="FYn-eM-Yms" id="yyp-9s-fBk"/>

@@ -71,9 +71,10 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="XAccelLabel" destination="xk2-yD-KNO" id="JJn-Zr-1My"/>
                         <outlet property="XDirLabel" destination="uwf-Wi-dpj" id="hMh-Bn-fpb"/>
-                        <outlet property="XaccelLabel" destination="xk2-yD-KNO" id="690-eZ-fSq"/>
                         <outlet property="YAccelLabel" destination="q3o-Rg-UJh" id="7bB-20-ok0"/>
+                        <outlet property="YDirLabel" destination="TRS-FP-xoD" id="IuK-gE-PXm"/>
                         <outlet property="ZAccelLabel" destination="VjV-wD-36w" id="1qo-sO-u88"/>
                         <outlet property="ZDirLabel" destination="9XP-Yx-Prl" id="V9e-gC-GDs"/>
                     </connections>

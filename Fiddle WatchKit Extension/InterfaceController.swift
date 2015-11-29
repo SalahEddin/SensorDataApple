@@ -13,6 +13,7 @@ import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //+++++++ Attributes +++++++//
+    let dirThreshold = 0.1
     var session: WCSession!
     let motionManager = CMMotionManager()
     // accelerometer labels
@@ -82,6 +83,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     @IBAction func sendStaticToiPhone() {
+        if(WCSession.isSupported()){
+            session.sendMessage(["static":"static message sent here"], replyHandler: nil, errorHandler: nil)
+        }
     }
     @IBAction func sendDynamicToiPhone() {
     }
@@ -90,28 +94,48 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         let xChange = xAccVal - accelHistory[0]
         let yChange = yAccVal - accelHistory[1]
         let zChange = zAccVal - accelHistory[2]
+        // update history of accelerometer values
+        accelHistory[0] = xAccVal
+        accelHistory[1] = yAccVal
+        accelHistory[2] = zAccVal
         
-        if(xChange > 0.1){
+        if(xChange > dirThreshold){
             XDirLabel.setText("left")
+            if(WCSession.isSupported()){
+                session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
+            }
         }
-        else if(xChange < -0.1){
+        else if(xChange < -dirThreshold){
             XDirLabel.setText("right")
+            if(WCSession.isSupported()){
+                session.sendMessage(["accelX":"right"], replyHandler: nil, errorHandler: nil)
+            }
         }
         else{
             XDirLabel.setText("NaN")
-        }
-        if(yChange > 1.2){
-            YDirLabel.setText("down")
-        }
-        else if(yChange < -1.2){
-            YDirLabel.setText("up")
-        }
-        if(zChange > 1.2){
-            ZDirLabel.setText("back")
-        }
-        else if(zChange < -1.2){
-            ZDirLabel.setText("forwd")
+            if(WCSession.isSupported()){
+                session.sendMessage(["accelX":"NaN"], replyHandler: nil, errorHandler: nil)
+            }
         }
         
+        if(yChange > dirThreshold){
+            YDirLabel.setText("down")
+        }
+        else if(yChange < -dirThreshold){
+            YDirLabel.setText("up")
+        }
+        else{
+            YDirLabel.setText("NaN")
+        }
+        
+        if(zChange > dirThreshold){
+            ZDirLabel.setText("back")
+        }
+        else if(zChange < -dirThreshold){
+            ZDirLabel.setText("forwd")
+        }
+        else{
+            ZDirLabel.setText("NaN")
+        }
     }
 }

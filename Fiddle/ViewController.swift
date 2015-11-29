@@ -48,6 +48,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         self.zLabel.text = message["z"]! as? String*/
         dispatch_async(dispatch_get_main_queue(), {
             self.ResultLabel.text = message["static"]! as? String
+            self.XAccelLabel.text = message[""]! as? String
         })
     }
 
