@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E2E5CA61C0B01A900EF41F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E5CA51C0B01A900EF41F2 /* AppDelegate.swift */; };
+		4E2E5CA81C0B01A900EF41F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E5CA71C0B01A900EF41F2 /* ViewController.swift */; };
+		4E2E5CAB1C0B01A900EF41F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E5CA91C0B01A900EF41F2 /* Main.storyboard */; };
+		4E2E5CAD1C0B01A900EF41F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E5CAC1C0B01A900EF41F2 /* Assets.xcassets */; };
+		4E2E5CB01C0B01A900EF41F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E5CAE1C0B01A900EF41F2 /* LaunchScreen.storyboard */; };
+		4E2E5CB51C0B01A900EF41F2 /* Fiddle WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E2E5CB41C0B01A900EF41F2 /* Fiddle WatchKit App.app */; };
+		4E2E5CBB1C0B01A900EF41F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E5CB91C0B01A900EF41F2 /* Interface.storyboard */; };
+		4E2E5CBD1C0B01A900EF41F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E5CBC1C0B01A900EF41F2 /* Assets.xcassets */; };
+		4E2E5CC41C0B01A900EF41F2 /* Fiddle WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4E2E5CC31C0B01A900EF41F2 /* Fiddle WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E2E5CCB1C0B01A900EF41F2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E5CCA1C0B01A900EF41F2 /* InterfaceController.swift */; };
+		4E2E5CCD1C0B01A900EF41F2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E5CCC1C0B01A900EF41F2 /* ExtensionDelegate.swift */; };
+		4E2E5CCF1C0B01A900EF41F2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E5CCE1C0B01A900EF41F2 /* NotificationController.swift */; };
+		4E2E5CD11C0B01A900EF41F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E5CD01C0B01A900EF41F2 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E2E5CB61C0B01A900EF41F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2E5C9A1C0B01A900EF41F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E2E5CB31C0B01A900EF41F2;
+			remoteInfo = "Fiddle WatchKit App";
+		};
+		4E2E5CC51C0B01A900EF41F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2E5C9A1C0B01A900EF41F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E2E5CC21C0B01A900EF41F2;
+			remoteInfo = "Fiddle WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E2E5CD81C0B01A900EF41F2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4E2E5CC41C0B01A900EF41F2 /* Fiddle WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2E5CDC1C0B01A900EF41F2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4E2E5CB51C0B01A900EF41F2 /* Fiddle WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4E2E5CA21C0B01A900EF41F2 /* Fiddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fiddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2E5CA51C0B01A900EF41F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E2E5CA71C0B01A900EF41F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E2E5CAA1C0B01A900EF41F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E2E5CAC1C0B01A900EF41F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E2E5CAF1C0B01A900EF41F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E2E5CB11C0B01A900EF41F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2E5CB41C0B01A900EF41F2 /* Fiddle WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fiddle WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2E5CBA1C0B01A900EF41F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4E2E5CBC1C0B01A900EF41F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E2E5CBE1C0B01A900EF41F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2E5CC31C0B01A900EF41F2 /* Fiddle WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Fiddle WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2E5CC91C0B01A900EF41F2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4E2E5CCA1C0B01A900EF41F2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4E2E5CCC1C0B01A900EF41F2 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		4E2E5CCE1C0B01A900EF41F2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4E2E5CD01C0B01A900EF41F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E2E5CD21C0B01A900EF41F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E2E5C9F1C0B01A900EF41F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2E5CC01C0B01A900EF41F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E2E5C991C0B01A900EF41F2 = {
+			isa = PBXGroup;
+			children = (
+				4E2E5CA41C0B01A900EF41F2 /* Fiddle */,
+				4E2E5CB81C0B01A900EF41F2 /* Fiddle WatchKit App */,
+				4E2E5CC71C0B01A900EF41F2 /* Fiddle WatchKit Extension */,
+				4E2E5CA31C0B01A900EF41F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E2E5CA31C0B01A900EF41F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E2E5CA21C0B01A900EF41F2 /* Fiddle.app */,
+				4E2E5CB41C0B01A900EF41F2 /* Fiddle WatchKit App.app */,
+				4E2E5CC31C0B01A900EF41F2 /* Fiddle WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E2E5CA41C0B01A900EF41F2 /* Fiddle */ = {
+			isa = PBXGroup;
+			children = (
+				4E2E5CA51C0B01A900EF41F2 /* AppDelegate.swift */,
+				4E2E5CA71C0B01A900EF41F2 /* ViewController.swift */,
+				4E2E5CA91C0B01A900EF41F2 /* Main.storyboard */,
+				4E2E5CAC1C0B01A900EF41F2 /* Assets.xcassets */,
+				4E2E5CAE1C0B01A900EF41F2 /* LaunchScreen.storyboard */,
+				4E2E5CB11C0B01A900EF41F2 /* Info.plist */,
+			);
+			path = Fiddle;
+			sourceTree = "<group>";
+		};
+		4E2E5CB81C0B01A900EF41F2 /* Fiddle WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				4E2E5CB91C0B01A900EF41F2 /* Interface.storyboard */,
+				4E2E5CBC1C0B01A900EF41F2 /* Assets.xcassets */,
+				4E2E5CBE1C0B01A900EF41F2 /* Info.plist */,
+			);
+			path = "Fiddle WatchKit App";
+			sourceTree = "<group>";
+		};
+		4E2E5CC71C0B01A900EF41F2 /* Fiddle WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4E2E5CCA1C0B01A900EF41F2 /* InterfaceController.swift */,
+				4E2E5CCC1C0B01A900EF41F2 /* ExtensionDelegate.swift */,
+				4E2E5CCE1C0B01A900EF41F2 /* NotificationController.swift */,
+				4E2E5CD01C0B01A900EF41F2 /* Assets.xcassets */,
+				4E2E5CD21C0B01A900EF41F2 /* Info.plist */,
+				4E2E5CC81C0B01A900EF41F2 /* Supporting Files */,
+			);
+			path = "Fiddle WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4E2E5CC81C0B01A900EF41F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E2E5CC91C0B01A900EF41F2 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E2E5CA11C0B01A900EF41F2 /* Fiddle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2E5CDD1C0B01A900EF41F2 /* Build configuration list for PBXNativeTarget "Fiddle" */;
+			buildPhases = (
+				4E2E5C9E1C0B01A900EF41F2 /* Sources */,
+				4E2E5C9F1C0B01A900EF41F2 /* Frameworks */,
+				4E2E5CA01C0B01A900EF41F2 /* Resources */,
+				4E2E5CDC1C0B01A900EF41F2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2E5CB71C0B01A900EF41F2 /* PBXTargetDependency */,
+			);
+			name = Fiddle;
+			productName = Fiddle;
+			productReference = 4E2E5CA21C0B01A900EF41F2 /* Fiddle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E2E5CB31C0B01A900EF41F2 /* Fiddle WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2E5CD91C0B01A900EF41F2 /* Build configuration list for PBXNativeTarget "Fiddle WatchKit App" */;
+			buildPhases = (
+				4E2E5CB21C0B01A900EF41F2 /* Resources */,
+				4E2E5CD81C0B01A900EF41F2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2E5CC61C0B01A900EF41F2 /* PBXTargetDependency */,
+			);
+			name = "Fiddle WatchKit App";
+			productName = "Fiddle WatchKit App";
+			productReference = 4E2E5CB41C0B01A900EF41F2 /* Fiddle WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4E2E5CC21C0B01A900EF41F2 /* Fiddle WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2E5CD51C0B01A900EF41F2 /* Build configuration list for PBXNativeTarget "Fiddle WatchKit Extension" */;
+			buildPhases = (
+				4E2E5CBF1C0B01A900EF41F2 /* Sources */,
+				4E2E5CC01C0B01A900EF41F2 /* Frameworks */,
+				4E2E5CC11C0B01A900EF41F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fiddle WatchKit Extension";
+			productName = "Fiddle WatchKit Extension";
+			productReference = 4E2E5CC31C0B01A900EF41F2 /* Fiddle WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E2E5C9A1C0B01A900EF41F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Salah Eddin Alshaal";
+				TargetAttributes = {
+					4E2E5CA11C0B01A900EF41F2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = R86STB8XPK;
+					};
+					4E2E5CB31C0B01A900EF41F2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = R86STB8XPK;
+					};
+					4E2E5CC21C0B01A900EF41F2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = R86STB8XPK;
+					};
+				};
+			};
+			buildConfigurationList = 4E2E5C9D1C0B01A900EF41F2 /* Build configuration list for PBXProject "Fiddle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E2E5C991C0B01A900EF41F2;
+			productRefGroup = 4E2E5CA31C0B01A900EF41F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E2E5CA11C0B01A900EF41F2 /* Fiddle */,
+				4E2E5CB31C0B01A900EF41F2 /* Fiddle WatchKit App */,
+				4E2E5CC21C0B01A900EF41F2 /* Fiddle WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E2E5CA01C0B01A900EF41F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2E5CB01C0B01A900EF41F2 /* LaunchScreen.storyboard in Resources */,
+				4E2E5CAD1C0B01A900EF41F2 /* Assets.xcassets in Resources */,
+				4E2E5CAB1C0B01A900EF41F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2E5CB21C0B01A900EF41F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2E5CBD1C0B01A900EF41F2 /* Assets.xcassets in Resources */,
+				4E2E5CBB1C0B01A900EF41F2 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2E5CC11C0B01A900EF41F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2E5CD11C0B01A900EF41F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E2E5C9E1C0B01A900EF41F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2E5CA81C0B01A900EF41F2 /* ViewController.swift in Sources */,
+				4E2E5CA61C0B01A900EF41F2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2E5CBF1C0B01A900EF41F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2E5CCF1C0B01A900EF41F2 /* NotificationController.swift in Sources */,
+				4E2E5CCD1C0B01A900EF41F2 /* ExtensionDelegate.swift in Sources */,
+				4E2E5CCB1C0B01A900EF41F2 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E2E5CB71C0B01A900EF41F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E2E5CB31C0B01A900EF41F2 /* Fiddle WatchKit App */;
+			targetProxy = 4E2E5CB61C0B01A900EF41F2 /* PBXContainerItemProxy */;
+		};
+		4E2E5CC61C0B01A900EF41F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E2E5CC21C0B01A900EF41F2 /* Fiddle WatchKit Extension */;
+			targetProxy = 4E2E5CC51C0B01A900EF41F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E2E5CA91C0B01A900EF41F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E2E5CAA1C0B01A900EF41F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4E2E5CAE1C0B01A900EF41F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E2E5CAF1C0B01A900EF41F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4E2E5CB91C0B01A900EF41F2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E2E5CBA1C0B01A900EF41F2 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E2E5CD31C0B01A900EF41F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E2E5CD41C0B01A900EF41F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E2E5CD61C0B01A900EF41F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Fiddle WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uni.salah.Fiddle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		4E2E5CD71C0B01A900EF41F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Fiddle WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uni.salah.Fiddle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		4E2E5CDA1C0B01A900EF41F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Fiddle_WatchKit_Extension;
+				INFOPLIST_FILE = "Fiddle WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = uni.salah.Fiddle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		4E2E5CDB1C0B01A900EF41F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Fiddle_WatchKit_Extension;
+				INFOPLIST_FILE = "Fiddle WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = uni.salah.Fiddle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		4E2E5CDE1C0B01A900EF41F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fiddle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uni.salah.Fiddle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4E2E5CDF1C0B01A900EF41F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fiddle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uni.salah.Fiddle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E2E5C9D1C0B01A900EF41F2 /* Build configuration list for PBXProject "Fiddle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2E5CD31C0B01A900EF41F2 /* Debug */,
+				4E2E5CD41C0B01A900EF41F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E2E5CD51C0B01A900EF41F2 /* Build configuration list for PBXNativeTarget "Fiddle WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2E5CD61C0B01A900EF41F2 /* Debug */,
+				4E2E5CD71C0B01A900EF41F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4E2E5CD91C0B01A900EF41F2 /* Build configuration list for PBXNativeTarget "Fiddle WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2E5CDA1C0B01A900EF41F2 /* Debug */,
+				4E2E5CDB1C0B01A900EF41F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4E2E5CDD1C0B01A900EF41F2 /* Build configuration list for PBXNativeTarget "Fiddle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2E5CDE1C0B01A900EF41F2 /* Debug */,
+				4E2E5CDF1C0B01A900EF41F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E2E5C9A1C0B01A900EF41F2 /* Project object */;
+}
