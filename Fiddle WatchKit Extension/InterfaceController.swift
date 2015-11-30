@@ -88,6 +88,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     @IBAction func sendDynamicToiPhone() {
+        
     }
     // infers the direction by comparing the difference of accelerometer in half a second
     func getAccelDirection(xAccVal: Double,yAccVal: Double,zAccVal: Double){
@@ -116,30 +117,33 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             accelMsg[1] = "down"
         }
         else if(yChange < -dirThreshold){
-            YDirLabel.setText("up")
+            accelMsg[1] = "up"
         }
         else{
-            YDirLabel.setText("NaN")
+            accelMsg[1] = "NaN"
         }
         
         if(zChange > dirThreshold){
-            ZDirLabel.setText("back")
+            accelMsg[2] = "back"
         }
         else if(zChange < -dirThreshold){
-            ZDirLabel.setText("forwd")
+            accelMsg[2] = "frwd"
         }
         else{
-            ZDirLabel.setText("NaN")
+            accelMsg[2] = "NaN"
         }
         
-        XDirLabel.setText(dirMsg[0])
-        YDirLabel.setText(dirMsg[1])
-        ZDirLabel.setText(dirMsg[2])
+        XDirLabel.setText( dirMsg[0] )
+        YDirLabel.setText( dirMsg[1] )
+        ZDirLabel.setText( dirMsg[2] )
         
         if(WCSession.isSupported()){
-            session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
-            session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
-            session.sendMessage(["accelX":"left"], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["accelX":xAccVal], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["accelY":yAccVal], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["accelZ":zAccVal], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["dirX":accelMsg[0]], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["dirY":accelMsg[1]], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["dirZ":accelMsg[2]], replyHandler: nil, errorHandler: nil)
         }
     }
 }

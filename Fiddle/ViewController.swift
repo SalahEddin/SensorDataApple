@@ -48,7 +48,13 @@ class ViewController: UIViewController, WCSessionDelegate {
         self.zLabel.text = message["z"]! as? String*/
         dispatch_async(dispatch_get_main_queue(), {
             self.ResultLabel.text = message["static"]! as? String
-            self.XAccelLabel.text = message[""]! as? String
+            self.XAccelLabel.text = message["accelX"]! as? String
+            self.YAccelLabel.text = message["accelY"]! as? String
+            self.ZAccelLabel.text = message["accelZ"]! as? String
+            
+            self.XDirLabel.text = message["dirX"]! as? String
+            self.YDirLabel.text = message["dirY"]! as? String
+            self.ZDirLabel.text = message["dirZ"]! as? String
         })
     }
 
