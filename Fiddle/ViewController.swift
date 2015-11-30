@@ -20,8 +20,19 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var XDirLabel: UILabel!
     @IBOutlet weak var YDirLabel: UILabel!
     @IBOutlet weak var ZDirLabel: UILabel!
-    
+    // static message label
     @IBOutlet weak var ResultLabel: UILabel!
+    // messages dictionay
+    var wmessage: [String: String] = [
+        "static"    : "not set"     ,
+        "accelX"    : "not set"     ,
+        "accelY"    : "not set"     ,
+        "accelZ"    : "not set"     ,
+        "dirX"      : "not set"     ,
+        "dirY"      : "not set"     ,
+        "dirZ"      : "not set"
+    ]
+    
     //+++++++ OS Methods +++++++//
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,20 +54,60 @@ class ViewController: UIViewController, WCSessionDelegate {
     // if message from watch is recieved
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         //recieve messages from watch
-        /*self.xLabel.text = message["x"]! as? String
-        self.yLabel.text = message["y"]! as? String
-        self.zLabel.text = message["z"]! as? String*/
+        /*
+        1- check if the message of this "port" dictionary key is recieved, the set the local dictionary key to it, else
+        2- set it from UI text
+        TODO include better handling if empty
+        */
+        if let msg = message["static"] {
+            self.wmessage["static"] = (msg as! String)
+        } else {
+            self.wmessage["static"] = self.ResultLabel.text
+        }
+        ////// acceleration
+        if let msg = message["accelX"] {
+            self.wmessage["accelX"] = (msg as! String)
+        } else {
+            self.wmessage["accelX"] = self.XAccelLabel.text
+        }
+        if let msg = message["accelY"] {
+            self.wmessage["accelY"] = (msg as! String)
+        } else {
+            self.wmessage["accelY"] = self.YAccelLabel.text
+        }
+        if let msg = message["accelZ"] {
+            self.wmessage["accelZ"] = (msg as! String)
+        } else {
+            self.wmessage["accelZ"] = self.ZAccelLabel.text
+        }
+        ////// direction
+        if let msg = message["dirX"] {
+            self.wmessage["dirX"] = (msg as! String)
+        } else {
+            self.wmessage["dirX"] = self.XDirLabel.text
+        }
+        if let msg = message["dirY"] {
+            self.wmessage["dirY"] = (msg as! String)
+        } else {
+            self.wmessage["dirY"] = self.YDirLabel.text
+        }
+        if let msg = message["dirZ"] {
+            self.wmessage["dirZ"] = (msg as! String)
+        } else {
+            self.wmessage["dirZ"] = self.ZDirLabel.text
+        }
+        
+        
         dispatch_async(dispatch_get_main_queue(), {
-            self.ResultLabel.text = message["static"]! as? String
-            self.XAccelLabel.text = message["accelX"]! as? String
-            self.YAccelLabel.text = message["accelY"]! as? String
-            self.ZAccelLabel.text = message["accelZ"]! as? String
+            self.ResultLabel.text = self.wmessage["static"]!
+            self.XAccelLabel.text = self.wmessage["accelX"]!
+            self.YAccelLabel.text = self.wmessage["accelY"]!
+            self.ZAccelLabel.text = self.wmessage["accelZ"]!
             
-            self.XDirLabel.text = message["dirX"]! as? String
-            self.YDirLabel.text = message["dirY"]! as? String
-            self.ZDirLabel.text = message["dirZ"]! as? String
+            self.XDirLabel.text = self.wmessage["dirX"]!
+            self.YDirLabel.text = self.wmessage["dirY"]!
+            self.ZDirLabel.text = self.wmessage["dirZ"]!
         })
     }
-
 }
 
